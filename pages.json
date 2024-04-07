@@ -1,0 +1,271 @@
+{
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+		 // "Verify":"@/components/verify/verify"
+	},
+	"pages": [{
+			"path": "pages/index/judge",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "二叠纪电商",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/index/GoodDetail",
+			"style": {
+				"navigationBarTitleText": "商品详情",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/web/web",
+			"style": {
+				"navigationBarTitleText": "网页链接"
+			}
+		}, {
+			"path": "pages/me/me",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/contract/index",
+			"style": {
+				"navigationBarTitleText": "合同",
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/contract/ContractDetail",
+			"style": {
+				"navigationBarTitleText": "合同详情",
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/contract/ConfirmPurchase",
+			"style": {
+				"navigationBarTitleText": "确认采购",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/contract/SuccessOrder",
+			"style": {
+				"navigationBarTitleText": "下单成功",
+				"navigationStyle": "custom" ,
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/order/index",
+			"style": {
+				"navigationBarTitleText": "订单",
+				"enablePullDownRefresh": true,
+				"navigationStyle": "custom"
+			}
+		},  {
+			"path": "pages/needMaterial/NeedMaterial",
+			"style": {
+				"navigationBarTitleText": "需求",
+				"enablePullDownRefresh": true,
+				"navigationStyle": "custom"
+			}
+		},{
+			"path": "pages/order/OrderDetail",
+			"style": {
+				"navigationBarTitleText": "订单详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/order/WaybillList",
+			"style": {
+				"navigationBarTitleText": "运单列表"
+			}
+		},
+		{
+			"path": "pages/order/NeedMaterialRecord",
+			"style": {
+				"navigationBarTitleText": "需求记录"
+			}
+		}
+	],
+	"subPackages": [{
+		"root": "pages/user",
+		"pages": [{
+			"path": "pay-password",
+			"style": {
+				"navigationBarTitleText": "设置支付密码",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "address",
+			"style": {
+				"navigationBarTitleText": "收货地址管理",
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "bills",
+			"style": {
+				"navigationBarTitleText": "发票管理",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "bill-detail",
+			"style": {
+				"navigationBarTitleText": "发票详情",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "account-settings",
+			"style": {
+				"navigationBarTitleText": "账户设置",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "link-person",
+			"style": {
+				"navigationBarTitleText": "联系人设置",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "auth-info",
+			"style": {
+				"navigationBarTitleText": "认证信息",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "message",
+			"style": {
+				"navigationBarTitleText": "消息通知",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "address-add-update",
+			"style": {
+				"navigationBarTitleText": "新增地址",
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "about-us",
+			"style": {
+				"navigationBarTitleText": "关于我们",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "contact-us",
+			"style": {
+				"navigationBarTitleText": "联系我们",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false,
+					// App特定样式
+					"popGesture": "none"
+				}
+			}
+		}, {
+			"path": "info",
+			"style": {
+				"navigationBarTitleText": "用户信息"
+			}
+		}, {
+			"path": "reset-password",
+			"style": {
+				"navigationBarTitleText": "修改登录密码"
+			}
+		}, {
+			"path": "forget-password",
+			"style": {
+				"navigationBarTitleText": "忘记密码"
+			}
+		}, {
+			"path": "forget-reset-password",
+			"style": {
+				"navigationBarTitleText": "设置密码"
+			}
+		}, {
+			"path": "select-role",
+			"style": {
+				"navigationBarTitleText": "选择角色",
+				"navigationStyle": "custom"
+			}
+		}]
+	}],
+	"preloadRule": {
+		"pages/me/me": {
+			"network": "all",
+			"packages": ["pages/user"]
+		},
+		"pages/user/login": {
+			"network": "all",
+			"packages": ["pages/user"]
+		}
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "二叠纪电商",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#FFFFFF"
+	},
+	"tabBar": {
+		"color": "#8C8C8C",
+		"fontSize": "0",
+		"iconWidth": "0",
+		"height": "0",
+		"selectedColor": "#222",
+		"backgroundColor": "#FFFFFF",
+		"borderStyle": "black",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/images/tabbar/index_n.png",
+				"selectedIconPath": "static/images/tabbar/index_a.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/contract/index",
+				"iconPath": "static/images/tabbar/hetong_n.png",
+				"selectedIconPath": "static/images/tabbar/hetong_a.png",
+				"text": "合同"
+			},
+			{
+				"pagePath": "pages/order/index",
+				"iconPath": "static/images/tabbar/order_n.png",
+				"selectedIconPath": "static/images/tabbar/order_a.png",
+				"text": "订单"
+			},
+			{
+				"pagePath": "pages/needMaterial/NeedMaterial",
+				"iconPath": "static/images/tabbar/yaoliao_n.png",
+				"selectedIconPath": "static/images/tabbar/yaoliao_a.png",
+				"text": "需求"
+			},
+			{
+				"pagePath": "pages/me/me",
+				"iconPath": "static/images/tabbar/me_n.png",
+				"selectedIconPath": "static/images/tabbar/me_a.png",
+				"text": "我的"
+			}
+		]
+	}
+}

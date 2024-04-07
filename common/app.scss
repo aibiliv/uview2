@@ -1,0 +1,195 @@
+.uni-tabbar-bottom{
+  z-index: 990;
+}
+.page-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.divider-line {
+  width: 100%;
+  height: 1rpx;
+  background-color: #EBEBEB;
+}
+
+.single-line {
+  lines: 1;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  overflow: hidden;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+}
+
+.u-font-bold {
+  font-weight: bold;
+}
+.text-right{
+  text-align: right;
+}
+.u-w-full {
+  width: 100%;
+}
+.fs-28r {
+  font-size: 28rpx;
+}
+.fs-26r {
+  font-size: 26rpx;
+}
+.fs-24r {
+  font-size: 24rpx;
+}
+.f-font-18 {
+  font-size: 18rpx;
+}
+.u-font-48 {
+  font-size: 48rpx;
+}
+.f-center {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.h-center {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.v-center {
+  display: flex;
+  align-items: center;
+}
+
+.color-black {
+  color: #222;
+}
+
+.color-8C8C8C{
+	color: #8C8C8C;
+}
+
+.color-595959{
+	color: #595959;
+}
+
+.color-bfbfbf{
+	color: #bfbfbf;
+}
+
+.color-222{
+	color: #222222;
+}
+
+.color-333{
+	color: #333;
+}
+
+.color-white {
+  color: #ffffff;
+}
+.color-gray {
+  color: #8c8c8c;
+}
+.color-red {
+  color: red;
+}
+.color-595959{
+	color: #595959;
+}
+
+.color-c2c6cf {
+  color: #c2c6cf;
+}
+
+.color-7d8598 {
+  color: #7d8598;
+}
+
+.color-theme{
+	color: $u-type-primary;
+}
+
+.f-main-color {
+  color: $u-main-color;
+}
+
+.f-light-color {
+  // color: $f-light-color;
+}
+
+.f-bg {
+  // background: $f-bg-color;
+}
+
+.f-blue-bg {
+  // background: $f-blue-color;
+}
+
+.f-blue-color {
+  // color: $f-blue-color;
+}
+
+.f-green-bg {
+  background: #64c0cd;
+}
+
+.f-green-color {
+  color: #64c0cd;
+}
+
+.footer-gap{
+	width: 100%;
+	height: 210rpx;
+}
+
+.common-footer {
+  position: fixed;
+  width: 750rpx;
+  background: #ffffff;
+  bottom: 0rpx;
+  padding-bottom: 96rpx;
+  padding-top: 10rpx;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+@for $i from 1 through 5 {
+  .u-line-#{$i} {
+    /* #ifdef APP-NVUE */
+    // nvue下，可以直接使用lines属性，这是weex特有样式
+    lines: $i;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /* #endif */
+
+    /* #ifndef APP-NVUE */
+    // vue下，单行和多行显示省略号需要单独处理
+    @if $i == 1 {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    } @else {
+      display: -webkit-box !important;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-break: break-all;
+      -webkit-line-clamp: $i;
+      -webkit-box-orient: vertical !important;
+    }
+    /* #endif */
+  }
+}
+
+.rotate90 {
+  transform: rotate(90deg);
+}
