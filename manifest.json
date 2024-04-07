@@ -105,7 +105,12 @@
         "optimization" : {
             "subPackages" : true
         },
-        "usingComponents" : true
+        "usingComponents" : true,
+        "permission" : {
+            "scope.userLocation" : {
+                "desc" : "帮助用户导航"
+            }
+        }
     },
     "mp-alipay" : {
         "usingComponents" : true,
@@ -136,6 +141,9 @@
                 "enable" : false
             }
         },
-        "title" : "uView UI"
+        "title" : "uView UI",
+        "sdkConfigs" : {
+            "maps" : {}
+        }
     }
 }

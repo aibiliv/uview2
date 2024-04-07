@@ -16,7 +16,8 @@
 			let vuex_token = this.$store.state.vuex_token;
 			if (!vuex_token) {
 				uni.reLaunch({
-					url: "/pages/user/login"
+					// url: "/pages/user/login"
+					url: "/pages/index/Map"
 				});
 			} else {
 				if (this.$store.state.vuex_roleKey === 2) {	

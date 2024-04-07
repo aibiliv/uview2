@@ -2,22 +2,16 @@
 	<view>
 		<map
 			id="map"
-			:latitude="markers[0] && markers[0].latitude"
-			:longitude="markers[0] && markers[0].longitude"
-			:markers="markers"
+			:latitude="latitude"
+			:longitude="longitude"
 			:style="{ width: '100vw', height: mapHeight }"
 			:scale="13"
 		></map>
+			<!-- :markers="markers" -->
 	</view>
 </template>
 <script>
 export default {
-	props: {
-		markers: {
-			type: Array,
-			default: () => []
-		}
-	},
 	data() {
 		return {
 			map: null,

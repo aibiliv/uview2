@@ -6,7 +6,7 @@
 			</u-button>
 		</view>
 		<!-- <view v-if="!isTcs" class="u-font-0 no-map-bg"><image src="../../static/images/order/no_map_bg.png" mode=""></image></view> -->
-		<Map v-if="isTcs && onTheWayTotal > 0" :markers="markers"></Map>
+		<!-- <Map v-if="isTcs && onTheWayTotal > 0" :markers="markers"></Map> -->
 
 		<view :class="isTcs && onTheWayTotal > 0 ? 'is-tcs-detail' : 'not-tcs-detail'">
 			<u-read-more
@@ -83,7 +83,7 @@
 </template>
 <script>
 import { mapState } from 'vuex'
-import Map from './components/Map.vue'
+// import Map from './components/Map.vue'
 import OrderItem from '@/components/order/OrderItem.vue'
 import GoodItem from '@/components/order/GoodItem.vue'
 import OrderDetailContent from './components/OrderDetailContent.vue'
@@ -93,7 +93,7 @@ import InputPasswordModal from './components/InputPasswordModal.vue'
 import { MD5 } from '@/common/adminmd5.js'
 export default {
 	components: {
-		Map,
+		// Map,
 		OrderItem,
 		GoodItem,
 		OrderDetailContent,
